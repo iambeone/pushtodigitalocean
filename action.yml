@@ -12,5 +12,5 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - -e token=${{ inputs.token }} -e name={{ inputs.name }}
+  env:
+    - token=${{ inputs.token }},name={{ inputs.name }}
