@@ -1,12 +1,16 @@
 name: 'Push to DigitalOcean'
 description: 'Make a Digital Ocean droplet and push docker image in it'
 inputs:
-  file:  # id of input
-    description: 'name of the file'
-    required: false
-    default: 'dockerimage12.tgz'
+  token:  # id of input
+    description: 'Digital Ocean token'
+    required: true
+    default: 'digitalOceanDeveloperToken'
+  name:  # id of input
+    description: 'Name of the droplet to be build'
+    required: true
+    default: 'fromgithub'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.file }}
+    -e token=${{ inputs.token }} -e name={{ inputs.name }}
