@@ -1,0 +1,12 @@
+name: 'Push to DigitalOcean'
+description: 'Make a Digital Ocean droplet and push docker image in it'
+inputs:
+  file:  # id of input
+    description: 'name of the file'
+    required: true
+    default: 'dockerimage.tgz'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.file }}
