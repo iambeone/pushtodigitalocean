@@ -13,4 +13,5 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
-    - token=${{ inputs.token }},name={{ inputs.name }}
+    token: ${{ inputs.token }}
+    name: ${{ inputs.name }}
