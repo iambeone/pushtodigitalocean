@@ -13,6 +13,4 @@ RUN sudo mv /tmp/docker-machine /usr/local/bin/docker-machine && chmod +x /usr/l
 
 COPY entrypoint.sh /usr/bin/.
 
-COPY dockerimage.tgz /usr/bin/.
-
 ENTRYPOINT ["sh", "entrypoint.sh"]
