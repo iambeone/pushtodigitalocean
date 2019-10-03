@@ -11,4 +11,4 @@ RUN sudo mv /tmp/docker-machine /usr/local/bin/docker-machine && chmod +x /usr/l
 
 COPY entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT ["entrypoint.sh"]
+CMD "sh entrypoint.sh"
