@@ -7,11 +7,16 @@ inputs:
     default: 'digitalOceanDeveloperToken'
   name:  # id of input
     description: 'Name of the droplet to be build'
+    required: false
+    default: 'fromgithub'    
+  ports:  # id of input
+    description: 'Ports parameters, passing to docker image'
     required: true
-    default: 'fromgithub'
+    default: '80:80'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
     token: ${{ inputs.token }}
     name: ${{ inputs.name }}
+    ports: ${{ inputs.ports }}
