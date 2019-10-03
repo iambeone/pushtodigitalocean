@@ -3,8 +3,8 @@ description: 'Make a Digital Ocean droplet and push docker image in it'
 inputs:
   file:  # id of input
     description: 'name of the file'
-    required: true
-    default: 'dockerimage.tgz'
+    required: false
+    default: 'dockerimage12.tgz'
 runs:
   using: 'docker'
   image: 'Dockerfile'
