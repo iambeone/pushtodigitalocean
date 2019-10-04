@@ -21,6 +21,9 @@ inputs:
     description: 'Name of the file'
     required: true
     default: 'dockerimage.tgz'
+outputs:
+  ip: # id of output
+    description: 'Droplet ip'
 runs:
   using: 'docker'
   image: 'Dockerfile'
