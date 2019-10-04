@@ -36,3 +36,20 @@ with:
   file: myimage.tgz
   name: dropletnametobecreated
 ```
+
+
+## Extanded example with docker create
+```yaml
+- name: Build image
+  run: docker build -t lunieapi . 
+- name: Save file
+  run: docker save lunieapi | gzip > lunieapi.tgz
+- name: push to do
+  uses: iambeone/pushtodigitalocean@master
+  with:
+    token: ${{ secrets.token }}
+    ports: 4000:4000
+    image: myimage
+    file: myimage.tgz
+    name: dropletnametobecreated
+```
