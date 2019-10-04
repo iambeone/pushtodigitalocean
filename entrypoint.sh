@@ -1,5 +1,5 @@
 #!/bin/bash
-docker-machine create --driver digitalocean --digitalocean-access-token $token docker-sandbox-$name
+docker-machine create --driver digitalocean --digitalocean-access-token $token $name
 docker-machine env $name --shell sh && eval $(docker-machine env $name --shell sh)
 ls -la
 docker load < $file
