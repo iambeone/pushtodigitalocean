@@ -8,11 +8,19 @@ inputs:
   name:  # id of input
     description: 'Name of the droplet to be build'
     required: false
-    default: 'fromgithub'    
+    default: 'fromgithub'
   ports:  # id of input
     description: 'Ports parameters, passing to docker image'
     required: true
     default: '80:80'
+  image:  # id of input
+    description: 'Name of the image'
+    required: true
+    default: 'dockerimage'
+  file:  # id of input
+    description: 'Name of the file'
+    required: true
+    default: 'dockerimage.tgz'
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -20,3 +28,5 @@ runs:
     token: ${{ inputs.token }}
     name: ${{ inputs.name }}
     ports: ${{ inputs.ports }}
+    image: ${{ inputs.image }}
+    file: ${{ inputs.file }}
