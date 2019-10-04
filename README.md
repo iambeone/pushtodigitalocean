@@ -41,9 +41,9 @@ with:
 ## Extanded example with docker create
 ```yaml
 - name: Build image
-  run: docker build -t lunieapi . 
+  run: docker build -t myimage . 
 - name: Save file
-  run: docker save lunieapi | gzip > lunieapi.tgz
+  run: docker save myimage | gzip > myimage.tgz
 - name: push to do
   uses: iambeone/pushtodigitalocean@master
   with:
