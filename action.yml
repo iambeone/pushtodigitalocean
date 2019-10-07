@@ -21,6 +21,14 @@ inputs:
     description: 'Name of the file'
     required: true
     default: 'dockerimage.tgz'
+  monitoring:  # id of input
+    description: 'Enable monitoring'
+    required: false
+    default: true
+  fingerprint:  # id of input
+    description: 'ssh fingerprint'
+    required: false
+    default: ''
 outputs:
   ip: # id of output
     description: 'Droplet ip'
