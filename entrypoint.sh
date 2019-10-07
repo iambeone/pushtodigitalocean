@@ -1,7 +1,8 @@
 #!/bin/bash
 docker-machine create --driver digitalocean \
   --digitalocean-ssh-key-fingerprint $fingerprint \
-  --digitalocean-monitoring true \
+  --digitalocean-monitoring \
+  --digitalocean-tags github \
   --digitalocean-access-token $token \
   $name
 docker-machine env $name --shell sh && eval $(docker-machine env $name --shell sh)
