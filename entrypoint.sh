@@ -1,4 +1,8 @@
 #!/bin/bash
+
+echo $private_key
+echo $fingerprint
+
 # adding ssh key
 mkdir -p ~/.ssh
 echo $private_key | tr -d '\r' > ~/.ssh/id_rsa
