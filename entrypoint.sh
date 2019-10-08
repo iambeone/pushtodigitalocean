@@ -20,7 +20,7 @@ docker-machine env $name --shell sh && eval $(docker-machine env $name --shell s
 # load docker image from file
 docker load < $file
 # run docker container
-docker run -d -p $ports $image
+docker run -d -p $ports --name $image $image
 # returning ip
 ip=$(docker-machine ip $name)
 echo ::set-output name=id::$ip
