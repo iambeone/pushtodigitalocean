@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo $private_key
-echo $fingerprint
 # adding agent
 apk add --no-cache openssh-client
 # adding ssh key
