@@ -2,7 +2,8 @@
 
 echo $private_key
 echo $fingerprint
-
+# adding agent
+apk add --no-cache openssh-client
 # adding ssh key
 mkdir -p ~/.ssh
 echo $private_key | tr -d '\r' > ~/.ssh/id_rsa
