@@ -41,3 +41,4 @@ runs:
     ports: ${{ inputs.ports }}
     image: ${{ inputs.image }}
     file: ${{ inputs.file }}
+    fingerprint: ${{ inputs.fingerprint }}
