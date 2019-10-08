@@ -29,6 +29,14 @@ inputs:
     description: 'ssh fingerprint'
     required: false
     default: ''
+  private_key:  # id of input
+    description: 'private_key content'
+    required: false
+    default: ''    
+  public_key:  # id of input
+    description: 'public_key content'
+    required: false
+    default: ''
 outputs:
   ip: # id of output
     description: 'Droplet ip'
@@ -42,3 +50,5 @@ runs:
     image: ${{ inputs.image }}
     file: ${{ inputs.file }}
     fingerprint: ${{ inputs.fingerprint }}
+    private_key: ${{ inputs.private_key }}
+    public_key: ${{ inputs.public_key }}
